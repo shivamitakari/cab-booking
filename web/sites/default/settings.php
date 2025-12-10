@@ -892,18 +892,30 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
+// $databases['default']['default'] = array (
+//   'database' => 'drupal10',
+//   'username' => 'drupal10',
+//   'password' => 'drupal10',
+//   'prefix' => '',
+//   'host' => 'database',
+//   'port' => '3306',
+//   'isolation_level' => 'READ COMMITTED',
+//   'driver' => 'mysql',
+//   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+//   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+// );
+ $settings['config_sync_directory'] = '../config/sync';
+
 $databases['default']['default'] = array (
-  'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
+  'database' => 'cab_booking_1',
+  'username' => 'cab_booking',
+  'password' => '5djnM4&66',
   'prefix' => '',
-  'host' => 'database',
+  'host' => 'localhost',
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
- $settings['config_sync_directory'] = '../config/sync';
-
 
