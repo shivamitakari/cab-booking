@@ -1,0 +1,12 @@
+name: 'Field Group Markup'
+type: module
+description: 'Provides a markup field group display formatter.'
+package : Fields
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+    - field_group:field_group
+
+# Information added by Drupal.org packaging script on 2025-10-24
+version: '1.0.3'
+project: 'field_group_markup'
+datestamp: 1761276343

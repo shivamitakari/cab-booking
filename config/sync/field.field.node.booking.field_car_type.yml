@@ -10,8 +10,8 @@ id: node.booking.field_car_type
 field_name: field_car_type
 entity_type: node
 bundle: booking
-label: 'Car Type'
-description: 'Select your preferred car type.'
+label: 'Choose car type'
+description: ''
 required: true
 translatable: false
 default_value: {  }

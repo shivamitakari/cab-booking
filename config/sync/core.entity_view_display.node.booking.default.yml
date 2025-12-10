@@ -14,7 +14,9 @@ dependencies:
     - field.field.node.booking.field_from
     - field.field.node.booking.field_full_name
     - field.field.node.booking.field_message
+    - field.field.node.booking.field_optional_add_on
     - field.field.node.booking.field_price
+    - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
     - node.type.booking
   module:
@@ -94,6 +96,14 @@ content:
     third_party_settings: {  }
     weight: 9
     region: content
+  field_optional_add_on:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
   field_price:
     type: number_decimal
     label: above
@@ -104,6 +114,25 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_reservation_date:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 11
     region: content
   field_seats:
     type: number_integer

@@ -1,0 +1,15 @@
+field_group.field_group_formatter_plugin.markup:
+  type: field_group.field_group_formatter_plugin.base
+  label: 'Mapping for the markup formatter settings'
+  mapping:
+    markup:
+      type: mapping
+      label: 'The markup settings of the group'
+      mapping:
+        value:
+          type: text
+          label: 'Text'
+          translatable: true
+        format:
+          type: string
+          label: 'Text format'

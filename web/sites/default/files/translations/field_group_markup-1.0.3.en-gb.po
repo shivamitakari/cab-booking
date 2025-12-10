@@ -1,0 +1,18 @@
+# English, British translation of Field Group Markup (1.0.3)
+# Copyright (c) 2025 by the English, British translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Field Group Markup (1.0.3)\n"
+"POT-Creation-Date: 2025-10-24 09:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: English, British\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Text"
+msgstr "Text"
+msgid "Text format"
+msgstr "Text format"

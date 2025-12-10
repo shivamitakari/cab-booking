@@ -11,9 +11,9 @@ id: node.booking.field_contact_number
 field_name: field_contact_number
 entity_type: node
 bundle: booking
-label: 'Contact Number'
+label: 'Enter your Mobile Number'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
@@ -26,7 +26,7 @@ settings:
   api_key: ''
   validation_number_type: MOBILE
   placeholder_number_type: MOBILE
-  custom_placeholder: ''
+  custom_placeholder: 'include country code e.g. +1765398467'
   container_class: ''
   extension_field: 0
   country_order: {  }

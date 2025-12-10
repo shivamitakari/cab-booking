@@ -1,0 +1,29 @@
+uuid: 534ac0e1-9dd2-4fec-bdc0-0e9dff7e0199
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_optional_add_on
+    - node.type.booking
+    - taxonomy.vocabulary.add_ons
+id: node.booking.field_optional_add_on
+field_name: field_optional_add_on
+entity_type: node
+bundle: booking
+label: 'Optional Add On'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      add_ons: add_ons
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

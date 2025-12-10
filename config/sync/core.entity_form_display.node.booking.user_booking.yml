@@ -15,7 +15,9 @@ dependencies:
     - field.field.node.booking.field_from
     - field.field.node.booking.field_full_name
     - field.field.node.booking.field_message
+    - field.field.node.booking.field_optional_add_on
     - field.field.node.booking.field_price
+    - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
     - node.type.booking
   module:
@@ -30,51 +32,46 @@ third_party_settings:
         - field_destination
       label: 'Location wrapper'
       region: content
-      parent_name: ''
-      weight: 0
-      format_type: html_element
+      parent_name: group_row
+      weight: 3
+      format_type: markup
       format_settings:
         classes: location-wrapper
         show_empty_fields: false
         id: ''
         label_as_html: false
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-        required_fields: true
+        markup:
+          value: '<h4>Step 1 - Enter Locations</h4>'
+          format: restricted_html
     group_preference_wrapper:
       children:
         - field_seats
         - field_car_type
       label: 'Preference Wrapper'
       region: content
-      parent_name: ''
-      weight: 1
-      format_type: html_element
+      parent_name: group_row
+      weight: 4
+      format_type: markup
       format_settings:
         classes: preference-wrapper
         show_empty_fields: false
         id: ''
         label_as_html: false
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-        required_fields: false
+        markup:
+          value: '<h4>Step 2 - Choose Vehicle &amp; Passengers</h4>'
+          format: restricted_html
     group_contact_details_wrapper:
       children:
+        - field_reservation_date
         - field_full_name
+        - field_email_id
+        - field_contact_number
+        - field_optional_add_on
+        - group_hidden_fields
       label: 'Contact Details Wrapper'
       region: content
-      parent_name: ''
-      weight: 2
+      parent_name: group_row2
+      weight: 3
       format_type: html_element
       format_settings:
         classes: contact-details-wrapper
@@ -90,13 +87,11 @@ third_party_settings:
         speed: fast
         required_fields: false
     group_contact_wrapper:
-      children:
-        - field_email_id
-        - field_contact_number
+      children: {  }
       label: 'Contact wrapper'
-      region: content
+      region: hidden
       parent_name: ''
-      weight: 3
+      weight: 15
       format_type: html_element
       format_settings:
         classes: contact-wrapper
@@ -118,8 +113,8 @@ third_party_settings:
         - field_price
       label: 'Hidden Fields'
       region: content
-      parent_name: ''
-      weight: 20
+      parent_name: group_contact_details_wrapper
+      weight: 5
       format_type: html_element
       format_settings:
         classes: hidden
@@ -134,6 +129,122 @@ third_party_settings:
         effect: none
         speed: fast
         required_fields: true
+    group_row:
+      children:
+        - group_location_wrapper
+        - group_preference_wrapper
+      label: Row
+      region: content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: 'row row-1'
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        required_fields: true
+        markup:
+          value: ''
+          format: null
+    group_location_title:
+      children: {  }
+      label: 'Location title'
+      region: hidden
+      parent_name: ''
+      weight: 16
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        open: false
+        description: ''
+        required_fields: true
+    group_location_fieldset:
+      children: {  }
+      label: 'Location Fieldset'
+      region: hidden
+      parent_name: ''
+      weight: 17
+      format_type: fieldset
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        label_as_html: false
+        description: ''
+        required_fields: true
+    group_price_calculator:
+      children: {  }
+      label: 'Price Calculator'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: markup
+      format_settings:
+        classes: form-wrapper
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        markup:
+          value: '<h4>Final transfer price calculator</h4><div class="distance-summary" id="distance-info"><div class="row"><div class="label row-item">Estimated Travel Distance</div><div class="row-item row-value" id="distance">&nbsp;</div></div><div class="row"><div class="label row-item">Estimated Travel Time</div><div class="row-item row-value" id="duration">&nbsp;</div></div><div class="row"><div class="label row-item">Final Price Estimate</div><div class="row-item row-value" id="price">&nbsp;</div></div></div>'
+          format: full_html
+    group_row2:
+      children:
+        - group_contact_details_wrapper
+        - group_route_map
+      label: 'Row 2'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: markup
+      format_settings:
+        classes: row
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        markup:
+          value: ''
+          format: restricted_html
+    group_route_map:
+      children: {  }
+      label: 'Route Map'
+      region: content
+      parent_name: group_row2
+      weight: 4
+      format_type: markup
+      format_settings:
+        classes: form-wrapper
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        markup:
+          value: '<div class="route-map">Map</div><div class="payment-options"><img src="/themes/csutom/booking/images/payment-options.png" width="368" height="187"></div>'
+          format: full_html
+    group_reservation_title:
+      children: {  }
+      label: 'Reservation title'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: markup
+      format_settings:
+        classes: ''
+        show_empty_fields: true
+        id: ''
+        label_as_html: false
+        markup:
+          value: '<h4>Step 3 - Request Reservation</h4>'
+          format: full_html
 id: node.booking.user_booking
 targetEntityType: node
 bundle: booking
@@ -147,7 +258,7 @@ content:
     third_party_settings: {  }
   field_contact_number:
     type: phone_default
-    weight: 5
+    weight: 4
     region: content
     settings:
       initial_country: auto
@@ -171,13 +282,13 @@ content:
     weight: 2
     region: content
     settings:
-      types: ''
+      types: address
       country:
-        - IN
+        - KE
     third_party_settings: {  }
   field_distance:
     type: number
-    weight: 26
+    weight: 1
     region: content
     settings:
       placeholder: ''
@@ -191,7 +302,7 @@ content:
     third_party_settings: {  }
   field_email_id:
     type: email_default
-    weight: 4
+    weight: 3
     region: content
     settings:
       placeholder: ''
@@ -202,9 +313,9 @@ content:
     weight: 1
     region: content
     settings:
-      types: ''
+      types: address
       country:
-        - IN
+        - KE
     third_party_settings: {  }
   field_full_name:
     type: string_textfield
@@ -214,12 +325,24 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_optional_add_on:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_price:
     type: number
-    weight: 27
+    weight: 3
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_reservation_date:
+    type: datetime_timestamp
+    weight: 0
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_seats:
     type: number

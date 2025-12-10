@@ -2,6 +2,9 @@
   Drupal.behaviors.priceCalculator = {
     attach: function (context, settings) {
       once('cab-booking-wrapper-init', '.cab-booking-wrapper', context).forEach(function (element) {
+        $('#edit-field-from-0-value').attr('placeholder', Drupal.t('Airport, hotel, or apartment address here'));
+        $('#edit-field-destination-0-value').attr('placeholder', Drupal.t('Hotel, apartment or Airport address here'));
+        $('#edit-field-seats-0-value').attr('placeholder', Drupal.t('1,2,3,4,5...'));
         const originAutocomplete = new google.maps.places.Autocomplete(document.getElementById("edit-field-from-0-value"));
         originAutocomplete.addListener("place_changed", () => {
           Drupal.originalPlace = originAutocomplete.getPlace();

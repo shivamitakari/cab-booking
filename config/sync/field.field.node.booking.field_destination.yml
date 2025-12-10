@@ -9,8 +9,8 @@ id: node.booking.field_destination
 field_name: field_destination
 entity_type: node
 bundle: booking
-label: 'Drop off'
-description: 'Enter your drop off point.'
+label: 'Enter your drop off address'
+description: ''
 required: true
 translatable: false
 default_value: {  }

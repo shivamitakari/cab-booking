@@ -9,8 +9,8 @@ id: node.booking.field_from
 field_name: field_from
 entity_type: node
 bundle: booking
-label: Pickup
-description: 'Enter your pickup point'
+label: 'Enter your pickup address'
+description: ''
 required: true
 translatable: false
 default_value: {  }

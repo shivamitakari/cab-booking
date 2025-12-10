@@ -21,8 +21,10 @@
         "drupal/core-project-message": "^10.5",
         "drupal/core-recommended": "^10.5",
         "drupal/field_group": "^3.6",
+        "drupal/field_group_markup": "^1.0",
         "drupal/geolocation": "^3.14",
         "drupal/google_place_autocomplete": "^2.1",
+        "drupal/markup": "^2.0",
         "drupal/phonenumber": "^1.0@beta",
         "drupal/recaptcha_v3": "^2.0",
         "drush/drush": "^12.5"

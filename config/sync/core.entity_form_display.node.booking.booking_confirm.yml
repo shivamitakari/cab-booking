@@ -15,7 +15,9 @@ dependencies:
     - field.field.node.booking.field_from
     - field.field.node.booking.field_full_name
     - field.field.node.booking.field_message
+    - field.field.node.booking.field_optional_add_on
     - field.field.node.booking.field_price
+    - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
     - node.type.booking
   module:
@@ -133,7 +135,9 @@ hidden:
   field_email_id: true
   field_from: true
   field_full_name: true
+  field_optional_add_on: true
   field_price: true
+  field_reservation_date: true
   field_seats: true
   langcode: true
   path: true

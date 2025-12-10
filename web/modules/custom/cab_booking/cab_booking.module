@@ -47,7 +47,7 @@ use Drupal\node\Entity\Node;
 function cab_booking_form_node_booking_user_booking_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // Change the submit button label from "Save" to "Book"
   if (isset($form['actions']['submit'])) {
-    $form['actions']['submit']['#value'] = t('Book');
+    $form['actions']['submit']['#value'] = t('Request Reservation');
   }
   $form['#validate'][] = 'cab_booking_form_node_booking_form_validate';
 }

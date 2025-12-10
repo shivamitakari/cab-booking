@@ -9,9 +9,9 @@ id: node.booking.field_seats
 field_name: field_seats
 entity_type: node
 bundle: booking
-label: Seats
-description: 'Select number of seats'
-required: false
+label: 'Enter the number of passengers'
+description: ''
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

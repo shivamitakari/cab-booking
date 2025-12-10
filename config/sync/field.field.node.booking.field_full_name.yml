@@ -9,7 +9,7 @@ id: node.booking.field_full_name
 field_name: field_full_name
 entity_type: node
 bundle: booking
-label: 'Full Name'
+label: 'Enter your Full Name'
 description: ''
 required: true
 translatable: false
