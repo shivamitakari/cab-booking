@@ -3,8 +3,15 @@ recipe: drupal10
 config:
   webroot: web
   php: '8.2'
-
 services:
   appserver:
     healthcheck:
       disable: true
+  database_11:
+    type: mariadb
+    overrides:
+      image: bitnamilegacy/mariadb:10.3.27
+    creds:
+      user: database_11
+      password: database_11
+      database: database_11

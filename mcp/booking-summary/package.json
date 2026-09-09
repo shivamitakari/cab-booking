@@ -1,0 +1,19 @@
+{
+  "name": "cab-booking-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local MCP server exposing the cab-booking summary endpoint as get_booking_summary.",
+  "bin": {
+    "cab-booking-mcp": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}

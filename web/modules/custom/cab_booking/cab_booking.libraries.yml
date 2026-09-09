@@ -4,3 +4,4 @@ price-calculator:
     js/price-calculator.js: {}
   dependencies:
     - core/jquery
+    - core/once

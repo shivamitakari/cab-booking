@@ -10,3 +10,18 @@ cab_booking.booking.confirm:
     parameters:
       node:
         type: entity:node
+
+# Read-only JSON summary of bookings for the Cowork dashboard artifact.
+# Access is gated by a shared token in the controller (see BookingApiController):
+# set $settings['cab_booking_api_token'] in settings.php and send it via the
+# X-API-Token header (or ?token= query param).
+cab_booking.api.summary:
+  path: '/api/bookings/summary'
+  defaults:
+    _controller: '\Drupal\cab_booking\Controller\BookingApiController::summary'
+    _title: 'Booking summary'
+  methods: [GET]
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

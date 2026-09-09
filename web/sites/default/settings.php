@@ -907,11 +907,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  $settings['config_sync_directory'] = '../config/sync';
 
 $databases['default']['default'] = array (
-  'database' => 'cab_booking_1',
-  'username' => 'cab_booking',
-  'password' => '5djnM4&66',
+  'database' => 'drupal10',
+  'username' => 'drupal10',
+  'password' => 'drupal10',
   'prefix' => '',
-  'host' => 'localhost',
+  'host' => 'database',
   'port' => '3306',
   'isolation_level' => 'READ COMMITTED',
   'driver' => 'mysql',

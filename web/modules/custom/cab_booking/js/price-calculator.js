@@ -38,7 +38,7 @@
             strokeWeight: 5,
           }
         });
-       map = new google.maps.Map($('.route-map')[0], {
+       let map = new google.maps.Map($('.route-map')[0], {
           zoom: 14,
           center: { lat: -34.397, lng: 150.644 },
           styles: [
@@ -150,7 +150,7 @@
     if (route_distance_in_km > maximum_distance) {
       return '';
     }
-    return (route_distance_in_km * price_per_km).toFixed(2); // Return price rounded to 2 decimal places  
+    return (route_distance_in_km * price_per_unit).toFixed(2); // Return price rounded to 2 decimal places
 
   }
 
