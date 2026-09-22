@@ -1,0 +1,23 @@
+uuid: b59b88d8-0a43-4405-99b6-23285527d413
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_terms_accepted
+    - node.type.booking
+id: node.booking.field_terms_accepted
+field_name: field_terms_accepted
+entity_type: node
+bundle: booking
+label: 'I accept the Terms and Conditions'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.booking.field_price
     - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
+    - field.field.node.booking.field_terms_accepted
     - node.type.booking
   module:
     - text
@@ -56,4 +57,5 @@ hidden:
   field_price: true
   field_reservation_date: true
   field_seats: true
+  field_terms_accepted: true
   langcode: true
