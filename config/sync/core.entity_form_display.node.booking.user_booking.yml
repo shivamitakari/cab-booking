@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.booking.field_price
     - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
+    - field.field.node.booking.field_terms_accepted
     - node.type.booking
   module:
     - field_group
@@ -350,6 +351,13 @@ content:
     region: content
     settings:
       placeholder: ''
+    third_party_settings: {  }
+  field_terms_accepted:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden:
   body: true

@@ -18,6 +18,7 @@ dependencies:
     - field.field.node.booking.field_price
     - field.field.node.booking.field_reservation_date
     - field.field.node.booking.field_seats
+    - field.field.node.booking.field_terms_accepted
     - node.type.booking
   module:
     - text
@@ -142,6 +143,16 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     weight: 4
+    region: content
+  field_terms_accepted:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 13
     region: content
   links:
     settings: {  }
