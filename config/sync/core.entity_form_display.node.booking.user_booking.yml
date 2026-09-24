@@ -354,7 +354,7 @@ content:
     third_party_settings: {  }
   field_terms_accepted:
     type: boolean_checkbox
-    weight: 10
+    weight: -10
     region: content
     settings:
       display_label: true
