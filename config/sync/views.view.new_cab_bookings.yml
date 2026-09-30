@@ -1439,7 +1439,7 @@ display:
     display_options:
       display_description: ''
       display_extenders: {  }
-      path: new-cab-bookings
+      path: cab-booking
     cache_metadata:
       max-age: -1
       contexts:
